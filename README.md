@@ -46,7 +46,9 @@ fun main(args : Array<String>) {
 	println("Hello World");
 }
 ```
+
 -----------------------------------------------------------------------------------------
+
 In Java, **constants** are declared with **final** keyword, while in Kotlin, **constants** are declared with **val** keyword. Similarly, **variables** in java are defined with specific type, while in Kotlin, we use **var** keyword.
 ```
 // Java Code
@@ -60,20 +62,25 @@ class Student {
 	var name : String = "";
 }
 ```
+
 -----------------------------------------------------------------------------------------
+
 In Kotlin, creating an instance of a class does not need the **new** keyword.
 ```
 var std1 = Student(); 	// → Student std1 = new Student();
 std1.name = "Ashish"; 	// → std1.name = "Ashish";
 println(std1.name); 	// → System.out.println(std1.name)
 ```
+
 -----------------------------------------------------------------------------------------  
+
 Kotlin also supports **${}** syntax to print statement. This makes the representation of print statement much more simpler and easy to read for the other users as **concatenation** takes a lot of space.
 ```
-System.out.println("This " + college + " has a good reputation");	// → Java	| 
-println("This " + college + "has a good reputation"); 				// → Kotlin | Traditional way
-println("This_ _**${**__college__**}**_ _has a good reputation"); 	// → Kotlin | Modern way
+System.out.println("This " + college + " has a good reputation");	// → Java   | 
+println("This " + college + "has a good reputation"); 			// → Kotlin | Traditional way
+println("This ${college} has a good reputation"); 			// → Kotlin | Modern way
 ```
+
 -----------------------------------------------------------------------------------------
 
 ### Kotlin Java Working Together
@@ -83,6 +90,7 @@ Unlike other languages, we do not need any interface when working with Kotlin an
 By default, in editors, when a private variable is declared, we can use the **generators** to create their setters/getters. In case of private variables in a class, the Kotlin uses this property and syntax to access these **getters/setters** via private variable name by default. If the **getters/setters** are not editor generated syntax then it is better to use traditional way as in **Java**.
 
 -----------------------------------------------------------------------------------------
+
 ```
 // Teacher.java
 public class Teacher{  
@@ -111,19 +119,22 @@ The below code shows the usage of default getters and setters in Kotlin code of 
 // Main.kt
 fun main(args : Array<String>) {
 	var teacher = Teacher("Ashish"); 	// → Teacher teacher = new Teacher("Ashish");
-	println(teacher.name); 				// → sout(teacher.getName());
+	println(teacher.name); 			// → sout(teacher.getName());
 	// output → "Ashish"
 
 	teacher.name = "Ashish Hattimare"; 	// → teacher.setName("Ashish Hattimare");
-	println(teacher.name); 				// → sout(teacher.getName());
+	println(teacher.name); 			// → sout(teacher.getName());
 	// output → "Ashish Hattimare"
 }
 ```
+
 -----------------------------------------------------------------------------------------
+
 ```
 var num1 : Int = 3; 		// Java Code → int num1 = 3;
 var str1 : String = "Ashi";	// Java Code → String str1 = "Ashish";
 ```
+
 -----------------------------------------------------------------------------------------
 
 ### Condition Statement
@@ -154,20 +165,21 @@ var result : Int = 0;
 // Modern Way → Expression Condition (else conditon is mandatory)
 {
 	result = 	if(num1 < num2) num2
-				else num1
+			else num1
 }
 ```
+
 -----------------------------------------------------------------------------------------
 
 ### Null Handling
 
 By default, the Kotlin does not support null assigning to a variables.
 ```
-var str1 : String = null; // → this is not valid as null cannot be assigned to non-null type String
+var str1 : String = null;	// → this is not valid as null cannot be assigned to non-null type String
 ```
 Thus, in order to make the code assign null, we have
 ```
-var str1 : String? = null; // → this is a valid statement in Kotlin (safe keyword - ?)
+var str1 : String? = null; 	// → this is a valid statement in Kotlin (safe keyword - ?)
 ```
 
 The below code displays an example of how **safe?** can be used in Kotlin
@@ -182,7 +194,7 @@ class Student {
 fun main(args : Array<String>) {
 	
 	var std = Student();
-	println(std.name); 			// → null, but it can be "Ashish" as well
+	println(std.name); 		// → null, but it can be "Ashish" as well
 	println(std.name.length); 	// ERROR, because "name" variable is of type "can-be null"
 	
 	println(std.name?.length); 	// Valid statement. We must use ? keyword if the type is "can-be null"
@@ -194,21 +206,23 @@ Similar to defined types, we can use **?** With user-defined Objects as well in 
 ```
 {
 	var std1 : Student = Student(); // → valid statements 	(1)
-	std1 = null; 					// → invalid statement 	(2)
+	std1 = null; 			// → invalid statement 	(2)
 }
 ```
 In order to make the statement (2) valid, we need to provide **'\<ClassName\>?'** to the statement (1)
 ```
 {
 	var std1 : Student? = Student();// → valid statement 	(1)
-	std1 = null; 					// → valid statement 	(2)
+	std1 = null; 			// → valid statement 	(2)
 }
 ```
+
 -----------------------------------------------------------------------------------------
 
 ### Switch and When Expression
 
 In Kotlin, we do not support **switch** statement. Instead, we make use of **when** statement, which works similarly to the switch statement **without break statement**.
+
 ```
 // Java Code
 
@@ -216,9 +230,9 @@ In Kotlin, we do not support **switch** statement. Instead, we make use of **whe
 	int num = 3;
 	switch(num) {
 		case 1 : sout("First");
-				 break;
+			 break;
 		case 3 : sout("Third");
-				 break;
+			 break;
 		
 		default: sout("None");
 	}
@@ -266,16 +280,17 @@ The difference is with the **for-loop**
 // Kotlin Code
 {
 	var ascRange = 0..13
-	for (i in ascRange step 2) { // step 1 is by-default
+	for (i in ascRange step 2) {	// step 1 is by-default
 		println(i);
 	}// → [0, 2, 4, 6, 8, 10, 12]
 
-	var desRange = 13 downTo 0; // → same as 13.downTo(0) as downTo is a infix method of Int
+	var desRange = 13 downTo 0;	// → same as 13.downTo(0) as downTo is a infix method of Int
 	for (i in desRange step 2) {
 		println(i)
 	}// → [13, 11, 9, 7, 5, 3, 1]
 }
 ```
+
 -----------------------------------------------------------------------------------------
 
 ### Lists and Map
@@ -336,6 +351,7 @@ In Java, we have different **Collections API** such as List, Stack, Queue, Prior
 	}
 }
 ```
+
 -----------------------------------------------------------------------------------------
 
 ### Function Expression
@@ -343,17 +359,18 @@ In Java, we have different **Collections API** such as List, Stack, Queue, Prior
 In Kotlin, we use **fun** keyword to declare functions/methods.
 In Kotlin, by default the functions are **static/global** in _Kotlin file_
 ```
-fun add(a : Int, b : Int) { // → public void add(int a, int b) {}
+fun add(a : Int, b : Int) { 		// → public void add(int a, int b) {}
 	println("${a} + ${b} = ${a+b}");
 }
 
-fun add(a : Int, b : Int) : **Any?** { // → public int add(int a, int b) {}
+fun add(a : Int, b : Int) : **Any?** { 	// → public int add(int a, int b) {}
 	return a + b;
 }
 
 // Inline Function
 fun add(a : Int, b : Int) : Any = a + b;
 ```
+
 -----------------------------------------------------------------------------------------
 
 ### Calling Kotlin Code From Java
@@ -365,9 +382,10 @@ fun main(args : Array<String>) {
 }
 
 fun add(a : Int, b : Int) : Any? = a + b; 	// → Static function Main.kt file
-fun max(a : Int, b : Int) : Int{ 			// → Static function Main.kt file
+fun max(a : Int, b : Int) : Int{ 		// → Static function Main.kt file
 	return (a > b) ? a : b;
 }
+
 -----------------------------------------------------------------------------------------
 
 // Kotlin Code : Operation.kt
@@ -381,6 +399,7 @@ class Operation {
 fun minus(a : Int, b : Int) : Int? { 		// → Static method of Operation.kt file  
 	return a – b; // can be null  
 }
+
 -----------------------------------------------------------------------------------------
 
 // MainFunction.java
@@ -433,6 +452,7 @@ fun calcAmount(amount : Int, interest : Double = 0.04) : Int {
 	return (amount + amount*interest).toInt();
 }
 ```
+
 -----------------------------------------------------------------------------------------
 
 **Named Parameter :** Sometimes, when the user reads his code, it is hard for him to identify for what purpose the parameters are used and what do each parameter signify, especially when the parameter is a constant value.
@@ -454,6 +474,7 @@ try {
 	// statements
 } catch(ignored : Exception) {}
 ```
+
 -----------------------------------------------------------------------------------------
 
 ### Extension Functions  
@@ -481,6 +502,7 @@ fun Student.plus(other : Student) : Student {
 	return tempStudent;
 }
 ```
+
 -----------------------------------------------------------------------------------------
 
 ### Infix Functions
@@ -567,6 +589,7 @@ class Student(var name : String) // → Primary Constructor
 	}
 }
 ```
+
 -----------------------------------------------------------------------------------------
 
 ### Inheritance
@@ -633,12 +656,12 @@ final class Student(var name : String) : Human(name) 		// → Primary Constructo
 // Kotlin Code : Main.kt
 
 fun main(args : Array<String>) {
-	var hum = Human("Sonali")  
-	hum.think()  
-	_println_("===================================")  
+	var hum = Human("Sonali");
+	hum.think();
+	println("===================================");
 	var stud : Student = Student("Ashish GH", 12);  
-	stud.think()  
-	stud.print()
+	stud.think();
+	stud.print();
 }
 ```
 Ouput to the above code is as follow:
@@ -654,6 +677,7 @@ Student Constructor
 Hello <Ashish GH>, your age is 12
 My name is <Ashish GH>
 ```
+
 -----------------------------------------------------------------------------------------
 
 ### Data Class
@@ -771,6 +795,7 @@ Ouput to the above code is as follow:
 Book(name=Java, price=10) Book(name=C++, price=15)
 Book(name=Java, price=10) Book(name=C++, price=15)
 ```
+
 -----------------------------------------------------------------------------------------
 
 ### Companion Object
@@ -809,4 +834,5 @@ class Member(var name : String, var age : Int) {
 	}
 }
 ```
+
 -----------------------------------------------------------------------------------------
