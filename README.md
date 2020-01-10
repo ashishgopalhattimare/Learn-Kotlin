@@ -20,6 +20,8 @@
 - [Object Keyword](#object-keyword)
 - [Companion Object](#companion-object)
 
+-----------------------------------------------------------------------------------------
+
 ### Why Kotlin Over Java?
 It is a statically typed programming language for modern multi-platform applications like Web, Android and Enterprise applications. It works over JVM and thus is platform-independent.
 It has the following advantages over Java:
