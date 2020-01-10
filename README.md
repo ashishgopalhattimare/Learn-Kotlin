@@ -2,6 +2,23 @@
 # **KOTLIN**
 - [Example of Java Code Vs Kotlin Code](#example-of-java-code-vs-kotlin-code)
 - [Kotlin Java Working Together](#kotlin-java-working-together)
+- [Condition Statement](#condition-statement)
+- [Null Handling](#null-handling)
+- [Switch and When Expression](#switch-and-when-expression)
+- [Loops and Range](#loops-and-range)
+- [Lists and Map](#lists-and-map)
+- [Function Expression](#function-expression)
+- [Calling Kotlin Code from Java](#calling-kotlin-code-from-java)
+- [Default Parameter and Named Parameters](#default-parameter-and-named-parameter)
+- [Exception Handling](#exception-handling)
+- [Extension Functions](#extension-functions)
+- [Infix Functions](#infix-functions)
+- [Operator Overloading Functions](#operator-overloading-functions)
+- [Constructors](#constructors)
+- [Inheritance](#inheritance)
+- [Data Class](#data-class)
+- [Object Keyword](#object-keyword)
+- [Companion Object](#companion-object)
 
 ### Why Kotlin Over Java?
 It is a statically typed programming language for modern multi-platform applications like Web, Android and Enterprise applications. It works over JVM and thus is platform-independent.
@@ -427,7 +444,7 @@ Here, the "amount" and "interest" keyword in the calcAmount calling method are *
 
 -----------------------------------------------------------------------------------------
 
-### Exceptions Handling
+### Exception Handling
 
 In Kotlin, Try/Catch is also an expression
 ```
@@ -550,7 +567,7 @@ class Student(var name : String) // → Primary Constructor
 ```
 -----------------------------------------------------------------------------------------
 
-### InHeritance
+### Inheritance
 
 Same rules as Java are applied here. **No Multiple Inheritance** as well.
 
@@ -714,7 +731,7 @@ The Kotlin provides the same functionality by adding **‘data’** keyword at t
 
 -----------------------------------------------------------------------------------------
 
-### Object Keyword (Singleton Object)
+### Object Keyword
 
 How can we create Singleton Object in Kotlin? Keyword : **object \<ClassName\>**
 It defines that there would be no multiple object of this class.
