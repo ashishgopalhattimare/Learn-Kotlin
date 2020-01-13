@@ -22,7 +22,7 @@
 
 -----------------------------------------------------------------------------------------
 
-### Why Kotlin Over Java?
+## Why Kotlin Over Java?
 It is a statically typed programming language for modern multi-platform applications like Web, Android and Enterprise applications. It works over JVM and thus is platform-independent.
 It has the following advantages over Java:
 1. Concise
@@ -83,7 +83,7 @@ println("This ${college} has a good reputation"); 			// → Kotlin | Modern way
 
 -----------------------------------------------------------------------------------------
 
-### Kotlin Java Working Together
+## Kotlin Java Working Together
 
 Unlike other languages, we do not need any interface when working with Kotlin and Java. They are easily compatible with each other. Hence, we can run java class while working with Kotlin application and vice-versa.
 
@@ -137,7 +137,7 @@ var str1 : String = "Ashi";	// Java Code → String str1 = "Ashish";
 
 -----------------------------------------------------------------------------------------
 
-### Condition Statement
+## Condition Statement
 
 Unlike in Java, Kotlin treats conditional statements as expression (also statements);  
 ```
@@ -171,7 +171,7 @@ var result : Int = 0;
 
 -----------------------------------------------------------------------------------------
 
-### Null Handling
+## Null Handling
 
 By default, the Kotlin does not support null assigning to a variables.
 ```
@@ -219,7 +219,7 @@ In order to make the statement (2) valid, we need to provide **'\<ClassName\>?'*
 
 -----------------------------------------------------------------------------------------
 
-### Switch and When Expression
+## Switch and When Expression
 
 In Kotlin, we do not support **switch** statement. Instead, we make use of **when** statement, which works similarly to the switch statement **without break statement**.
 
@@ -255,7 +255,7 @@ In Kotlin, we do not support **switch** statement. Instead, we make use of **whe
 
 -----------------------------------------------------------------------------------------
 
-### Loops and Range
+## Loops and Range
 
 In Kotlin, the **while** and **do-while** loops works in the same way as in Java.
 
@@ -293,7 +293,7 @@ The difference is with the **for-loop**
 
 -----------------------------------------------------------------------------------------
 
-### Lists and Map
+## Lists and Map
 
 In Java, we have different **Collections API** such as List, Stack, Queue, Priority Queue, HashMap and so on.
 
@@ -354,7 +354,7 @@ In Java, we have different **Collections API** such as List, Stack, Queue, Prior
 
 -----------------------------------------------------------------------------------------
 
-### Function Expression
+## Function Expression
 
 In Kotlin, we use **fun** keyword to declare functions/methods.
 In Kotlin, by default the functions are **static/global** in _Kotlin file_
@@ -373,7 +373,7 @@ fun add(a : Int, b : Int) : Any = a + b;
 
 -----------------------------------------------------------------------------------------
 
-### Calling Kotlin Code From Java
+## Calling Kotlin Code From Java
 ```
 // Kotlin Code : Main.kt
 
@@ -420,7 +420,7 @@ By default, when the Kotlin code compiles, if the class name is **Operation.kt**
 
 -----------------------------------------------------------------------------------------
 
-### Default Parameter and Named Parameter
+## Default Parameter and Named Parameter
 
 Sometimes, we want to use the default parameters to methods (like we do in C++). In Java, this is not possible.
 ```
@@ -466,7 +466,7 @@ Here, the "amount" and "interest" keyword in the calcAmount calling method are *
 
 -----------------------------------------------------------------------------------------
 
-### Exception Handling
+## Exception Handling
 
 In Kotlin, Try/Catch is also an expression
 ```
@@ -477,7 +477,7 @@ try {
 
 -----------------------------------------------------------------------------------------
 
-### Extension Functions  
+## Extension Functions  
 
 Sometimes, we do not have the access to a class to make modification to it. In those cases, it is hard to make changes to the code and difficult as well. Hence, Kotlin provides the **extension functions** which are used as external functions to a class.
 ```
@@ -505,7 +505,7 @@ fun Student.plus(other : Student) : Student {
 
 -----------------------------------------------------------------------------------------
 
-### Infix Functions
+## Infix Functions
 
 Sometimes, you may write the function calling more like English Language.
 
@@ -522,7 +522,7 @@ To make a function an **infix function**, we need to put "**infix**" at the begi
 
 -----------------------------------------------------------------------------------------
 
-### Operator Overloading Functions
+## Operator Overloading Functions
 
 We can also use the unary operation like +, -, ++ and their functions as we do in C++ operator overloading. There are specific function for each operator overloading.
 
@@ -552,7 +552,7 @@ operator infix fun Student.plus(other : Student) : Student
 
 -----------------------------------------------------------------------------------------
 
-### Constructors
+## Constructors
 ```
 fun main(args : Array<String>) {
 
@@ -592,7 +592,7 @@ class Student(var name : String) // → Primary Constructor
 
 -----------------------------------------------------------------------------------------
 
-### Inheritance
+## Inheritance
 
 Same rules as Java are applied here. **No Multiple Inheritance** as well.
 
@@ -680,7 +680,7 @@ My name is <Ashish GH>
 
 -----------------------------------------------------------------------------------------
 
-### Data Class
+## Data Class
 
 For the developers, the need of **toString()**, **hashCode()**, and **equals()** is always needed to check whether the two objects have same data or not.
 
@@ -757,7 +757,7 @@ The Kotlin provides the same functionality by adding **‘data’** keyword at t
 
 -----------------------------------------------------------------------------------------
 
-### Object Keyword
+## Object Keyword
 
 How can we create Singleton Object in Kotlin? Keyword : **object \<ClassName\>**
 It defines that there would be no multiple object of this class.
@@ -798,7 +798,7 @@ Book(name=Java, price=10) Book(name=C++, price=15)
 
 -----------------------------------------------------------------------------------------
 
-### Companion Object
+## Companion Object
 
 (Used to declare **static** variables/methods in Kotlin)
 
